@@ -9,5 +9,11 @@ namespace Assets.Helper
     {
         // zmienna sterujacy czuloscia poruszania statkiem
         public const float movSpeed = 5f; 
+        
+    }
+
+    class Test
+    {
+
     }
 }
