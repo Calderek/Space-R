@@ -2,14 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*Wstępne ogarnięcie funkcjonalności strzelania. Pew pew! */
+
 public class Weapon : MonoBehaviour {
 
     public GameObject m_BulletPrefab;
     public Transform m_BulletSpawnPoint;
 
-    public float m_Speed = 30;
-    public float m_LifeTime = 0.5f;
-    public float m_FireRate = 0.5f;
+    //Podstawowe parametry pocisku
+
+    public float m_Velocity = 30; //Prędkość pocisku
+    public float m_LifeTime = 0.5f; //Długość życia pocisku
+    public float m_FireRate = 0.5f; //Szybkostrzelność
 
     private bool m_CanShoot = true;
 
@@ -26,14 +30,15 @@ public class Weapon : MonoBehaviour {
 		if(Input.GetKey(KeyCode.Space) && m_CanShoot)
         {
             StartCoroutine(Fire());
-            
         }
     }
+
+    //Tutaj spawn / despawn pocisków, kontrola szybkostrzelności
 
     public IEnumerator Fire()
     {
         var bullet = (GameObject)Instantiate(m_BulletPrefab, m_BulletSpawnPoint.position, m_BulletSpawnPoint.rotation);
-        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * m_Speed;
+        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * m_Velocity;
 
         m_CanShoot = false;
         yield return new WaitForSeconds(m_FireRate);
