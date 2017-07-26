@@ -86,6 +86,7 @@
 -define:UNITY_TEAM_LICENSE
 Assets/Helper/PlayerHelper.cs
 Assets/Infrastructure/Startup.cs
+Assets/Scripts/CameraFollow.cs
 Assets/Scripts/EnemiesCreate.cs
 Assets/Scripts/PlayerMovement.cs
 Assets/Scripts/SpaceshipControlls.cs
