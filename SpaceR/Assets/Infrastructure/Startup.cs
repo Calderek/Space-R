@@ -12,7 +12,7 @@ public class Startup {
     // Use this for initialization
     static Startup()
     {
-        EnemiesCreate creator = new EnemiesCreate();
-        creator.Create();
+        //EnemiesCreate creator = new EnemiesCreate();
+        //creator.Create();
     }
 }
