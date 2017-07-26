@@ -12,6 +12,9 @@ public class EnemyInfo : MonoBehaviour {
 
     //private Vector3 Startposition;
 
+    private bool leftMove=false;
+    private bool downMove = false;
+
 
     // Use this for initialization
     void Start () {
@@ -26,13 +29,32 @@ public class EnemyInfo : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //transform.TransformPoint(Vector3.zero);
-        position.x = rowPlace * 8 - 8;
-        position.z = colPlace * 8 - 8;
-        position.y = 0;
-        transform.position = position;
-        //transform.localPosition = new Vector3(position.x,position.y,position.z);
-        //transform.position = new Vector3(rowPlace * -8 - 8 , transform.position.y, colPlace * -8 - 8 );
+
+        position = transform.position;
+        downMove = position.z <= finishPosition.z ? false : true;
+        Debug.Log(position.z + "   " + finishPosition.z);
+        leftMove = position.x <= finishPosition.x ? false : true;
+
+        float movement = Time.deltaTime * 5;
+
+        if(downMove)
+        {
+            transform.Translate(-movement, 0, 0);
+        }
+        else
+        {
+            //leftMove = position.z >= finishPosition.z ? false : true;
+            //Debug.Log(leftMove);
+            if (leftMove)
+            {
+                transform.Translate(0, movement, 0);
+
+            }
+        }
+
+
+        //Debug.Log(Time.deltaTime);
+
 
     }
 }
