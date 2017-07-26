@@ -26,6 +26,15 @@ public class EnemySpawn : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+
+        
+        float h = Time.deltaTime * PlayerHelper.movSpeed;
+        float v = Time.deltaTime * PlayerHelper.movSpeed;
+
+        transform.Translate(-v, h, 0);
+
+
+
+
+    }
 }

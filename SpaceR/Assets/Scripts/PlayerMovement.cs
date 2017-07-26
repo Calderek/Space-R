@@ -10,12 +10,13 @@ public class PlayerMovement : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+        //przechowuje zawartość klikniecia zalezna od danej stralki(-1 do 1)
         float h = Input.GetAxis("Horizontal") * Time.deltaTime * PlayerHelper.movSpeed;
-            //przechowuje zawartość klikniecia zalezna od danej stralki(-1 do 1)
-        float v = Input.GetAxis("Vertical") * Time.deltaTime * PlayerHelper.movSpeed;
         //to samo tylko strzalki gora, dol
+        float v = Input.GetAxis("Vertical") * Time.deltaTime * PlayerHelper.movSpeed;
 
-        transform.Translate(-v, h, 0);   //zmiana polozenia obiektu w oparciu o zawartosc zmiennych
+        //zmiana polozenia obiektu w oparciu o zawartosc zmiennych
+        transform.Translate(-v, h, 0);   
 
     }
 }
