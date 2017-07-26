@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyInfo : MonoBehaviour {
 
@@ -10,7 +8,6 @@ public class EnemyInfo : MonoBehaviour {
     private Vector3 position;
     private Vector3 finishPosition;
 
-    //private Vector3 Startposition;
 
     private bool leftMove=false;
     private bool downMove = false;
@@ -43,17 +40,13 @@ public class EnemyInfo : MonoBehaviour {
         }
         else
         {
-            //leftMove = position.z >= finishPosition.z ? false : true;
-            //Debug.Log(leftMove);
+
             if (leftMove)
             {
                 transform.Translate(0, movement, 0);
 
             }
         }
-
-
-        //Debug.Log(Time.deltaTime);
 
 
     }
