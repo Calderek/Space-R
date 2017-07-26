@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class EnemyInfo : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public int rowPlace;
+    public int colPlace;
+
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
