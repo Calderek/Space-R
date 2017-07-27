@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class AuthorsMenu : MonoBehaviour {
 
-    public GameObject SettingsScreen;
+    public GameObject StartScreen;
     public GameObject AuthorsScreen;
 
     public void BackFromAuthors()
     {
         AuthorsScreen.SetActive(false);
-        SettingsScreen.SetActive(true);
+        StartScreen.SetActive(true);
         
     }
 

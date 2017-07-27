@@ -2052,7 +2052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e68ad626df134de49927a2902c584e2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SettingsScreen: {fileID: 2141541870}
+  StartScreen: {fileID: 845188134}
   AuthorsScreen: {fileID: 869385234}
 --- !u!1 &1748812382
 GameObject:

@@ -84,11 +84,12 @@
 -define:UNITY_EDITOR_WIN
 -define:ENABLE_NATIVE_ARRAY_CHECKS
 -define:UNITY_TEAM_LICENSE
-Assets/Bullet.cs
+-define:ENABLE_VSTU
 Assets/Helper/EnemyHelper.cs
 Assets/Helper/PlayerHelper.cs
 Assets/Infrastructure/Startup.cs
 Assets/Scripts/AuthorsMenu.cs
+Assets/Scripts/Bullet.cs
 Assets/Scripts/CameraFollow.cs
 Assets/Scripts/Enemy/EnemiesCreate.cs
 Assets/Scripts/Enemy/EnemyDestruction.cs
