@@ -6,6 +6,9 @@ public class StartMenu : MonoBehaviour {
     
     public Transform Player;
     public GameObject ScreenStart;
+    public GameObject ScreenSettings;
+    public GameObject ScreenAuthors;
+
     void Start()
     {
         Time.timeScale = 0;
@@ -17,4 +20,20 @@ public class StartMenu : MonoBehaviour {
         ScreenStart.SetActive(false);
         Time.timeScale = 1;
     }
+    public void StartMenuSettings()
+    {
+        ScreenStart.SetActive(false);
+        ScreenSettings.SetActive(true);
+    }
+    public void AuthorsList()
+    {
+        ScreenStart.SetActive(false);
+        ScreenAuthors.SetActive(true);
+    }
+    public void Exit()
+    {
+
+    }
+
+
 }
