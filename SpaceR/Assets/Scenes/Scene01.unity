@@ -377,6 +377,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114992333837207292, guid: ef34f688a1f60614eb819ca77ea7ac1a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef34f688a1f60614eb819ca77ea7ac1a, type: 2}
   m_IsPrefabParent: 0
@@ -457,6 +462,11 @@ CanvasRenderer:
 --- !u!1 &485251140 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1218308920110572, guid: ef34f688a1f60614eb819ca77ea7ac1a,
+    type: 2}
+  m_PrefabInternal: {fileID: 228711517}
+--- !u!4 &485251145 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4942912414737502, guid: ef34f688a1f60614eb819ca77ea7ac1a,
     type: 2}
   m_PrefabInternal: {fileID: 228711517}
 --- !u!1 &620212344
@@ -577,7 +587,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 620672176}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1675133885}
+        m_MethodName: GameActivation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &620672176
@@ -735,7 +756,7 @@ GameObject:
   - component: {fileID: 845188137}
   - component: {fileID: 845188136}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: StartMenuPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -929,6 +950,7 @@ GameObject:
   - component: {fileID: 1675133880}
   - component: {fileID: 1675133879}
   - component: {fileID: 1675133884}
+  - component: {fileID: 1675133885}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1018,6 +1040,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 485251140}
+--- !u!114 &1675133885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1675133878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdcb931325810c044b88fb8bff94d6a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 485251145}
+  ScreenStart: {fileID: 845188134}
 --- !u!1 &1748812382
 GameObject:
   m_ObjectHideFlags: 0
