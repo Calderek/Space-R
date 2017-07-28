@@ -13,7 +13,7 @@ public class EnemySpawn : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {   
-        for(int i=0;i<EnemyHelper.enemyAmount;i++)
+        for(int i=0;i<EnemyHelper.amount;i++)
         {
             var enemy=Instantiate(enemy_Perfabs, place_spawn);
             enemy.name = "Enemy " + (i + 1);

@@ -7,6 +7,7 @@ namespace Assets.Helper
 {
     public static class EnemyHelper
     {
-        public static int enemyAmount = 16;
+        public static int amount = 16;
+        public static int defaultHealth = 3;
     }
 }
