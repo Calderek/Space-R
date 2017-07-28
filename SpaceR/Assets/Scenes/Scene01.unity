@@ -1401,10 +1401,10 @@ RectTransform:
   m_Father: {fileID: 845188135}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 166.34999, y: -58.050003}
+  m_SizeDelta: {x: 292.69998, y: 76.100006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &620672175
 MonoBehaviour:
@@ -1502,6 +1502,7 @@ GameObject:
   - component: {fileID: 621918566}
   - component: {fileID: 621918565}
   - component: {fileID: 621918564}
+  - component: {fileID: 621918567}
   m_Layer: 5
   m_Name: AudioPanel
   m_TagString: Untagged
@@ -1590,6 +1591,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 621918562}
+--- !u!114 &621918567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 621918562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c265de77ab9b2a24fae2acd7f4256662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSystem: {fileID: 7045303}
+  selectedObject: {fileID: 346264326}
 --- !u!1 &710886206
 GameObject:
   m_ObjectHideFlags: 0
@@ -1622,10 +1636,10 @@ RectTransform:
   m_Father: {fileID: 845188135}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 166.34999, y: -230.25002}
+  m_SizeDelta: {x: 292.69998, y: 76.100006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &710886208
 MonoBehaviour:
@@ -1993,13 +2007,14 @@ GameObject:
   - component: {fileID: 845188137}
   - component: {fileID: 845188136}
   - component: {fileID: 845188138}
+  - component: {fileID: 845188139}
   m_Layer: 5
   m_Name: StartMenuPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &845188135
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2077,6 +2092,19 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
+--- !u!114 &845188139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 845188134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c265de77ab9b2a24fae2acd7f4256662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSystem: {fileID: 7045303}
+  selectedObject: {fileID: 620672173}
 --- !u!1 &869385234
 GameObject:
   m_ObjectHideFlags: 0
@@ -2088,6 +2116,7 @@ GameObject:
   - component: {fileID: 869385237}
   - component: {fileID: 869385236}
   - component: {fileID: 869385238}
+  - component: {fileID: 869385239}
   m_Layer: 5
   m_Name: AuthorsPanel
   m_TagString: Untagged
@@ -2170,6 +2199,19 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
+--- !u!114 &869385239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 869385234}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c265de77ab9b2a24fae2acd7f4256662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSystem: {fileID: 7045303}
+  selectedObject: {fileID: 835772239}
 --- !u!1 &921677014
 GameObject:
   m_ObjectHideFlags: 0
@@ -2623,7 +2665,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1168120408}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1675133886}
+        m_MethodName: AudioMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1168120408
@@ -2809,9 +2862,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1675133887}
-        m_MethodName: BackFromAuthors
-        m_Mode: 1
+      - m_Target: {fileID: 621918562}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2141541870}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3267,6 +3331,7 @@ GameObject:
   - component: {fileID: 1675133885}
   - component: {fileID: 1675133886}
   - component: {fileID: 1675133887}
+  - component: {fileID: 1675133888}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3400,6 +3465,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartScreen: {fileID: 845188134}
   AuthorsScreen: {fileID: 869385234}
+--- !u!114 &1675133888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1675133878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89d760ac6b6dc084985456461ec7d98c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioScreen: {fileID: 621918562}
+  SettingsScreen: {fileID: 2141541870}
 --- !u!1 &1748812382
 GameObject:
   m_ObjectHideFlags: 0
@@ -3432,10 +3510,10 @@ RectTransform:
   m_Father: {fileID: 845188135}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 166.34999, y: -316.35004}
+  m_SizeDelta: {x: 292.69998, y: 76.100006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1748812384
 MonoBehaviour:
@@ -3937,10 +4015,10 @@ RectTransform:
   m_Father: {fileID: 845188135}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 166.34999, y: -144.15001}
+  m_SizeDelta: {x: 292.69998, y: 76.100006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2085689827
 MonoBehaviour:
@@ -4305,6 +4383,7 @@ GameObject:
   - component: {fileID: 2141541873}
   - component: {fileID: 2141541872}
   - component: {fileID: 2141541874}
+  - component: {fileID: 2141541875}
   m_Layer: 5
   m_Name: SettingsMenuPanel
   m_TagString: Untagged
@@ -4389,3 +4468,16 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
+--- !u!114 &2141541875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2141541870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c265de77ab9b2a24fae2acd7f4256662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSystem: {fileID: 7045303}
+  selectedObject: {fileID: 56442355}
