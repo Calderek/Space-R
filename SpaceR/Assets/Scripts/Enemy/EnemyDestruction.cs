@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyDestruction : MonoBehaviour {
 
     public int health = 3;
+    public ParticleSystem explosionPrefab;
 
 	// Use this for initialization
 	void Start () {
@@ -26,7 +27,14 @@ public class EnemyDestruction : MonoBehaviour {
         }
         if(health <=0)
         {
-            Destroy(gameObject);
+            Explode();
         }
+    }
+
+    void Explode()
+    {
+
+        Instantiate(explosionPrefab, transform.position, transform.rotation);
+        Destroy(gameObject);
     }
 }
