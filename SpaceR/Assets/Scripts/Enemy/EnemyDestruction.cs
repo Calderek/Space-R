@@ -20,8 +20,8 @@ public class EnemyDestruction : MonoBehaviour {
     void OnCollisionEnter(Collision coll)
     {
         Bullet bullet = coll.collider.GetComponent<Bullet>() as Bullet;
-
-        if(bullet != null)
+        RocketController rocket = coll.collider.GetComponent<RocketController>() as RocketController;
+        if(bullet || rocket != null)
         {
             health--;
         }

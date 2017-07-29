@@ -37,7 +37,8 @@ public class Weapon : MonoBehaviour {
 
     public IEnumerator Fire()
     {
-        var bullet = (GameObject)Instantiate(m_BulletPrefab, m_BulletSpawnPoint.position, m_BulletSpawnPoint.rotation);
+        WeaponSwitcher weapon = gameObject.GetComponent<WeaponSwitcher>() as WeaponSwitcher;
+        var bullet = (GameObject)Instantiate(weapon.weaponList[weapon.currentWeapon], m_BulletSpawnPoint.position, m_BulletSpawnPoint.rotation);
         bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * m_Velocity;
 
         m_CanShoot = false;
