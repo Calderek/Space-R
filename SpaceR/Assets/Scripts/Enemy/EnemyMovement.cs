@@ -12,9 +12,6 @@ public class EnemyMovement : MonoBehaviour {
     private int rowPlace;
     private int colPlace;
 
-    
-
-    // Use this for initialization
     // Use this for initialization
     void Start()
     {
@@ -22,7 +19,6 @@ public class EnemyMovement : MonoBehaviour {
         var spaceInformation = GetComponent<EnemyInfo>();
         rowPlace = spaceInformation.rowPlace;
         colPlace = spaceInformation.colPlace;
-        //Debug.Log("Statek " + name + " ma być ustawiony w" + rowPlace + "rzedzie oraz " + colPlace + " kolumnie");
         position = transform.position;
 
         //todo helper for placement spawn enemy
@@ -37,15 +33,13 @@ public class EnemyMovement : MonoBehaviour {
     {
         float movement = Time.deltaTime * EnemyHelper.defaultVelocity;
         position = transform.position;
+        downMove = position.z <= finishPosition.z ? false : true;
 
         switch(GetComponent<EnemyInfo>().direction)
         {
             case "left":
                 {
-                    downMove = position.z <= finishPosition.z ? false : true;
-                    //Debug.Log(position.z + "   " + finishPosition.z);
                     leftMove = position.x >= finishPosition.x ? false : true;
-
 
                     if (downMove)
                     {
@@ -66,18 +60,13 @@ public class EnemyMovement : MonoBehaviour {
                 }
             case "right":
                 {
-                    downMove = position.z <= finishPosition.z ? false : true;
-                    //Debug.Log(position.z + "   " + finishPosition.z);
                     leftMove = position.x <= finishPosition.x ? false : true;
-
-
                     if (downMove)
                     {
                         transform.Translate(-movement, 0, 0);
                     }
                     else
                     {
-
                         if (leftMove)
                         {
                             transform.Translate(0, movement, 0);
@@ -87,9 +76,5 @@ public class EnemyMovement : MonoBehaviour {
                     break;
                 }
         }
-
-
-        
-
     }
 }
