@@ -1,17 +1,15 @@
 ﻿using Assets.Helper;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawn : MonoBehaviour {
 
     public GameObject enemy_Perfabs;
     public Transform place_spawn;
+    public string Direction;
 
     private EnemyInfo enemyInfo;
+    private int i = 1;
 
-    private static int i = 1;
 	// Use this for initialization
 	void Start ()
     {
@@ -29,12 +27,8 @@ public class EnemySpawn : MonoBehaviour {
         enemyInfo.rowPlace = i / 4;
         enemyInfo.colPlace = i % 4;
         enemyInfo.health = EnemyHelper.defaultHealth;
+        enemyInfo.direction = Direction;
         i++;
     }
 	
-	// Update is called once per frame
-	void Update () {
-    }
-
-   
 }
