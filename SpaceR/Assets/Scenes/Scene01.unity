@@ -839,7 +839,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4942912414737502, guid: ef34f688a1f60614eb819ca77ea7ac1a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -6.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4942912414737502, guid: ef34f688a1f60614eb819ca77ea7ac1a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -860,6 +860,10 @@ Prefab:
     - target: {fileID: 4942912414737502, guid: ef34f688a1f60614eb819ca77ea7ac1a, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4738539144959254, guid: ef34f688a1f60614eb819ca77ea7ac1a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 10.04
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef34f688a1f60614eb819ca77ea7ac1a, type: 2}
@@ -1086,7 +1090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4036a4eecd22184a87cb7599755f6df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy_Perfabs: {fileID: 1161637010529156, guid: 1cd1324ab9b036043bb9b5ba497c529e,
+  enemy_Perfabs: {fileID: 1075614149226098, guid: 4dcd3239f780baa4e869f8421a613c55,
     type: 2}
   place_spawn: {fileID: 282649129}
   Direction: left
@@ -1097,7 +1101,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 282649127}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.6, y: -5.139862, z: 40.7}
+  m_LocalPosition: {x: -25, y: 0, z: 40}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

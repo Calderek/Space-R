@@ -19,7 +19,7 @@ public class EnemySpawn : MonoBehaviour {
 
     private void CreateEnemy()
     {
-        if(i==16)
+        if(i>=EnemyHelper.amount - 1)
             CancelInvoke("CreateEnemy");
         var enemy = Instantiate(enemy_Perfabs, place_spawn);
         enemy.name = "Enemy " + (i + 1);

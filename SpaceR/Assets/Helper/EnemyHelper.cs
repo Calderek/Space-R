@@ -9,7 +9,7 @@ namespace Assets.Helper
     {
         public static int amount = 16;
         public static int defaultHealth = 5;
-        public static int defaultVelocity = 5;
+        public static int defaultVelocity = 15;
 
     }
 }
