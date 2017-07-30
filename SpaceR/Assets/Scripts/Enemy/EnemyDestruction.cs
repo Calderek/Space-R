@@ -1,21 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyDestruction : MonoBehaviour {
 
-    public int health = 3;
+    private EnemyInfo info;
     public ParticleSystem explosionPrefab;
 
 	// Use this for initialization
 	void Start () {
-		
+        info = GetComponent<EnemyInfo>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     void OnCollisionEnter(Collision coll)
     {
@@ -23,9 +17,9 @@ public class EnemyDestruction : MonoBehaviour {
         RocketController rocket = coll.collider.GetComponent<RocketController>() as RocketController;
         if(bullet || rocket != null)
         {
-            health--;
+            info.health--;
         }
-        if(health <=0)
+        if(info.health <=0)
         {
             Explode();
         }
@@ -33,8 +27,8 @@ public class EnemyDestruction : MonoBehaviour {
 
     void Explode()
     {
-
         Instantiate(explosionPrefab, transform.position, transform.rotation);
         Destroy(gameObject);
     }
+
 }

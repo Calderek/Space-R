@@ -28,6 +28,7 @@ public class EnemySpawn : MonoBehaviour {
         enemyInfo = enemy_Perfabs.GetComponent<EnemyInfo>();
         enemyInfo.rowPlace = i / 4;
         enemyInfo.colPlace = i % 4;
+        enemyInfo.health = EnemyHelper.defaultHealth;
         i++;
     }
 	

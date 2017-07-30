@@ -109,6 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rowPlace: 4
   colPlace: 0
+  health: 0
 --- !u!114 &114493588479546654
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -131,6 +132,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 673ee40b4904d064e9f77a80a965a8ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
   explosionPrefab: {fileID: 198835770736829752, guid: cf6ac5a6a606e9340a8a1c2a666f1c41,
     type: 2}
