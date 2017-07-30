@@ -24,8 +24,22 @@ public class EnemyMovement : MonoBehaviour {
 
         //todo helper for placement spawn enemy
         finishPosition = new Vector3();
-        finishPosition.x = rowPlace * 8 - 8;
-        finishPosition.z = colPlace * 8 - 8;
+        switch(spaceInformation.direction)
+        {
+            case "left":
+                {
+                    finishPosition.x = rowPlace * 8 - 60;
+                    finishPosition.z = colPlace * 8 - 8;
+                    break;
+                }
+            case "right":
+                {
+                    
+                    finishPosition.x = rowPlace * 8 - 8;
+                    finishPosition.z = colPlace * 8 - 8;
+                    break;
+                }
+        }
         Debug.Log("Końcowa pozycja statku" + name + " to x: " + finishPosition.x + " z: " + finishPosition.z);
 
         finishPosition.y = 0;
