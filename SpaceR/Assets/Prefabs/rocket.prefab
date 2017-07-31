@@ -28,7 +28,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1991605705367738
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,6 +138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 922a76f349cacc24eba04bf1f21fbec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  expPrefab: {fileID: 198026016829343076, guid: ba3b0310bf6d12446ada4b5aa86366fd,
+    type: 2}
 --- !u!136 &136821833253237270
 CapsuleCollider:
   m_ObjectHideFlags: 1

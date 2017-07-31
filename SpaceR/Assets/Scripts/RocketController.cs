@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RocketController : MonoBehaviour {
 
+    public ParticleSystem expPrefab;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -16,6 +18,7 @@ public class RocketController : MonoBehaviour {
 
     void OnCollisionEnter(Collision coll)
     {
+        Instantiate(expPrefab, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 }

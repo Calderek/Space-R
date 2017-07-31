@@ -8,7 +8,7 @@ public class explosionController : MonoBehaviour {
 	void Start () {
         var exp = GetComponent<ParticleSystem>();
         
-        Destroy(gameObject, exp.duration);
+        Destroy(gameObject, exp.main.duration);
     }
 
 	
