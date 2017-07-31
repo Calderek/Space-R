@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 33722074801990288}
   - component: {fileID: 23901655316465832}
   - component: {fileID: 114640945338787368}
-  - component: {fileID: 114328647746610912}
   - component: {fileID: 114609231206622024}
+  - component: {fileID: 114328647746610912}
   - component: {fileID: 65391176425283390}
   m_Layer: 0
   m_Name: enemy model 2 left
@@ -107,8 +107,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 118096a20fe051249ac05f2b36ac9b4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rowPlace: 3
-  colPlace: 3
   health: 5
   direction: left
 --- !u!114 &114609231206622024

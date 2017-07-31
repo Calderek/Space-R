@@ -9,7 +9,7 @@ public class EnemyMovement : MonoBehaviour {
 
     private bool leftMove = false;
     private bool downMove = false;
-    private int rowPlace;
+    private int rowPlace ;
     private int colPlace;
 
     // Use this for initialization
@@ -17,10 +17,9 @@ public class EnemyMovement : MonoBehaviour {
     {
 
         var spaceInformation = GetComponent<EnemyInfo>();
-        rowPlace = spaceInformation.rowPlace;
-        colPlace = spaceInformation.colPlace;
-        //position = transform.position;
-        //Debug.Log("Startowa pozycja statku" + name + " to x: " + position.x + " z: " + position.z);
+        rowPlace =(int) spaceInformation.rowPlace ;
+        colPlace = (int)spaceInformation.colPlace;
+        Debug.Log(name + " movement row " + spaceInformation.rowPlace + " col" + spaceInformation.colPlace);
 
         //todo helper for placement spawn enemy
         finishPosition = new Vector3();
@@ -40,8 +39,6 @@ public class EnemyMovement : MonoBehaviour {
                     break;
                 }
         }
-        Debug.Log("Końcowa pozycja statku" + name + " to x: " + finishPosition.x + " z: " + finishPosition.z);
-
         finishPosition.y = 0;
     }
 
@@ -50,7 +47,6 @@ public class EnemyMovement : MonoBehaviour {
     {
         float movement = Time.deltaTime * EnemyHelper.defaultVelocity;
         position = transform.position;
-        Debug.Log("Obecna pozycja statku" + name + " to x: " + position.x + " z: " + position.z);
 
         downMove = position.z >= finishPosition.z ? true : false;
 
@@ -81,12 +77,9 @@ public class EnemyMovement : MonoBehaviour {
                 {
                     //Wylicza czy statek powinien poruszać się w lewo. Jeżeli obecna pozycja jest wieksza od końcowej to się powinien poruszać
                     leftMove = position.x >= finishPosition.x ? true : false;
-                    Debug.Log("pozycja statku w sprawdzaniu warunku na poruszenie sie na boki " + name + " to x: " + position.x + " <=: " + finishPosition.z + " "+ leftMove);
-
 
                     if (downMove)
                     {
-                        //Debug.Log("Tu sie poruszam w dół");
                         transform.Translate(0, 0, -movement);
                     }
                     else
@@ -94,8 +87,6 @@ public class EnemyMovement : MonoBehaviour {
                         if (leftMove)
                         {
                             transform.Translate(-movement, 0, 0);
-                            Debug.Log("Tu sie poruszam w lewo");
-
                         }
                     }
                     break;
