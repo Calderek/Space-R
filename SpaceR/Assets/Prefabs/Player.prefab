@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 114774235868738152}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -232,7 +232,7 @@ MonoBehaviour:
   l_lifetime: 2.5
   rocketPrefab: {fileID: 1444825322078056, guid: f46002eac86d1a84dbcc6c15847d1e55,
     type: 2}
-  r_damage: 5
+  r_damage: 3
   r_rof: 1
   r_velocity: 50
   r_lifetime: 2.5

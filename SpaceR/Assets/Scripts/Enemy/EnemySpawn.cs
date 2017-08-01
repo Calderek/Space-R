@@ -20,7 +20,7 @@ public class EnemySpawn : MonoBehaviour {
     private void CreateEnemy()
     {
         var enemy = Instantiate(enemy_Perfabs, place_spawn);
-        enemy.name = "Enemy " + i ;
+        enemy.name = "Enemy " + i ; 
         enemyInfo = enemy.GetComponent<EnemyInfo>();
         enemyInfo.rowPlace = i / 4;
         enemyInfo.colPlace = i % 4;

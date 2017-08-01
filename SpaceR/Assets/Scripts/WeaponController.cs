@@ -11,21 +11,6 @@ public class WeaponController : MonoBehaviour {
     public int currentWeaponIndex = 0;
     private bool CanShoot = true;
 
-    /*public GameObject Weapon { get; set; }
-    public int Damage { get; set; }
-    public float RoF { get; set; }
-    public float Velocity { get; set; }
-    public float LifeTime { get; set; }
-
-    public WeaponController(GameObject weapon, int damage, float rof, float velocity, float lifetime)
-    {
-        Weapon = weapon;
-        Damage = damage;
-        RoF = rof;
-        Velocity = velocity;
-        LifeTime = lifetime;
-    }*/
-
     private GameObject oWeapon;
     private int oDamage;
     private float oVelocity;
