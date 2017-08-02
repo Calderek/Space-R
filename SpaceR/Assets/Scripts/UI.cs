@@ -20,6 +20,6 @@ public class UI : MonoBehaviour
     void Update()
     {
         // Debug.Log(weapon.ammo);
-        HUDText.text = "Ammo: " + weapon.ammo.ToString() + "\n" + "HP: " + weapon.hp.ToString();
+        //HUDText.text = "Ammo: " + weapon.ammo.ToString() + "\n" + "HP: " + weapon.hp.ToString();
     }
 }
