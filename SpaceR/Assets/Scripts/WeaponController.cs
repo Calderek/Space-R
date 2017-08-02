@@ -9,10 +9,12 @@ public class WeaponController : MonoBehaviour {
     private WeaponList list;
 
     public int currentWeaponIndex = 0;
+
     private bool CanShoot = true;
 
     private GameObject oWeapon;
     private int oDamage;
+    private int oAmmo;
     private float oVelocity;
     private float oRof;
     private float oLifeTime;
@@ -39,9 +41,10 @@ public class WeaponController : MonoBehaviour {
             }
         }
 
-        if(Input.GetKey(KeyCode.Space) && CanShoot)
+        if(Input.GetKey(KeyCode.Space) && CanShoot && oAmmo > 0)
         {
             StartCoroutine(Fire());
+            oAmmo--;
         }
     }
 
@@ -68,6 +71,7 @@ public class WeaponController : MonoBehaviour {
         oRof = list.weaponList.Select(x => list.weaponList[currentWeaponIndex].RoF).First();
         oLifeTime = list.weaponList.Select(x => list.weaponList[currentWeaponIndex].LifeTime).First();
         oWeapon = list.weaponList.Select(x => list.weaponList[currentWeaponIndex].Weapon).First();
+        oAmmo = list.weaponList.Select(x => list.weaponList[currentWeaponIndex].Ammo).First();
 
         var bullet = Instantiate(oWeapon, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
         bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * oVelocity;
