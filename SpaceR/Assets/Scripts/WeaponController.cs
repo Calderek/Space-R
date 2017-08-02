@@ -55,11 +55,11 @@ public class WeaponController : MonoBehaviour {
         {
             if (i == currentWeaponIndex)
             {
-                list.weaponList[i].gameObject.SetActive(true);
+              //  list.weaponList[i].gameObject.SetActive(true);
             }
             else
             {
-                list.weaponList[i].gameObject.SetActive(false);
+              //  list.weaponList[i].gameObject.SetActive(false);
             }
         }
     }
