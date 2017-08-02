@@ -42,7 +42,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 9
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -54,7 +54,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
-    serializedVersion: 9
+    serializedVersion: 8
     m_Resolution: 2
     m_BakeResolution: 40
     m_TextureWidth: 1024
@@ -87,7 +87,7 @@ LightmapSettings:
     m_PVRFilteringAtrousNormalSigma: 1
     m_PVRFilteringAtrousPositionSigma: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_ShadowMaskMode: 2
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -901,7 +901,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 166.19998, y: -288.62857}
+  m_AnchoredPosition: {x: 166.19998, y: -288.6286}
   m_SizeDelta: {x: 292.39996, y: 30.114285}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &229293576
@@ -1085,7 +1085,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 279901473}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 47690653}
@@ -1093,7 +1093,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -50.42}
+  m_AnchoredPosition: {x: 435, y: 344}
   m_SizeDelta: {x: 160, y: 130.83}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &279901475
@@ -1107,6 +1107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec60658c11ddc24898e7e2aa0547f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HUDText: {fileID: 0}
 --- !u!114 &279901476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1327,7 +1328,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 166.19998, y: -196.39998}
+  m_AnchoredPosition: {x: 166.19998, y: -196.39996}
   m_SizeDelta: {x: 292.39996, y: 84.93333}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &346264328
@@ -3899,7 +3900,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 163.80002, y: -230.25}
+  m_AnchoredPosition: {x: 163.80002, y: -230.25002}
   m_SizeDelta: {x: 287.6, y: 76.100006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1168120407
@@ -4551,7 +4552,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 163.80002, y: -177.4573}
+  m_AnchoredPosition: {x: 163.80002, y: -177.45732}
   m_SizeDelta: {x: 287.6, y: 314.91464}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1330788258
@@ -4993,7 +4994,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 166.19998, y: -191.40001}
+  m_AnchoredPosition: {x: 166.19998, y: -191.4}
   m_SizeDelta: {x: 292.39996, y: 30.114285}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1653788851
@@ -5429,7 +5430,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 166.19997, y: -315.82498}
+  m_AnchoredPosition: {x: 166.19997, y: -315.825}
   m_SizeDelta: {x: 292.39996, y: 75.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1748812384
@@ -5549,7 +5550,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 166.19998, y: -240.0143}
+  m_AnchoredPosition: {x: 166.19998, y: -240.01428}
   m_SizeDelta: {x: 292.39996, y: 47.114285}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1823444829
@@ -5957,20 +5958,6 @@ Light:
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_FalloffTable:
-    m_Table[0]: 0
-    m_Table[1]: 0
-    m_Table[2]: 0
-    m_Table[3]: 0
-    m_Table[4]: 0
-    m_Table[5]: 0
-    m_Table[6]: 0
-    m_Table[7]: 0
-    m_Table[8]: 0
-    m_Table[9]: 0
-    m_Table[10]: 0
-    m_Table[11]: 0
-    m_Table[12]: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
