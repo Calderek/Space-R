@@ -18,10 +18,8 @@ public class EnemyDestruction : MonoBehaviour {
 
         info = GetComponent<EnemyInfo>();
 	}
-	
-    //UWAGA, jeżeli dodacie nową broń to pamiętajcie żeby nadać jej unikalny tag w oknie inspektora, inaczej nie będzie obrażeń
 
-    void OnCollisionEnter(Collision coll)
+    private void OnCollisionEnter(Collision coll)
     {
         Debug.Log("Otrzymano trafienie.");
         for(int i = 0; i < list.weaponList.Count; i++)
@@ -34,6 +32,7 @@ public class EnemyDestruction : MonoBehaviour {
             {
                 Debug.Log("Trafienie weszło za " + oDamage);
                 info.health -= oDamage;
+                break;
             }
         }
 

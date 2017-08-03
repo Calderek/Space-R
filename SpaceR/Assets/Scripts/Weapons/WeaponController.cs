@@ -18,14 +18,13 @@ public class WeaponController : MonoBehaviour {
     private float oVelocity;
     private float oRof;
     private float oLifeTime;
+
     //###########################################################################################################
 
     // Use this for initialization
     void Start ()
     {
         list = GetComponent<WeaponList>();
-
-        SwitchWeapon(currentWeaponIndex);
     }
 	
 	// Update is called once per frame
@@ -36,8 +35,6 @@ public class WeaponController : MonoBehaviour {
             if (Input.GetKeyDown("" + i))
             {
                 currentWeaponIndex = i - 1;
-
-                SwitchWeapon(currentWeaponIndex);
             }
         }
 
@@ -49,19 +46,9 @@ public class WeaponController : MonoBehaviour {
 
     //#############################################################################################################
 
-    void SwitchWeapon(int currentWeaponIndex)
+    private void OnTriggerEnter(Collider other)
     {
-        for (int i = 0; i < list.weaponList.Count; i++)
-        {
-            if (i == currentWeaponIndex)
-            {
-              //  list.weaponList[i].gameObject.SetActive(true);
-            }
-            else
-            {
-              //  list.weaponList[i].gameObject.SetActive(false);
-            }
-        }
+        
     }
 
     public IEnumerator Fire()
