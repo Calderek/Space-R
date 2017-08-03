@@ -27,7 +27,7 @@ public class MeteorMovement : MonoBehaviour
         if (meteorSize>13f)
         {
             meteorSpeed = Random.Range(minMeteorSpeed*2f, maxMeteorSpeed);
-            transform.position = new Vector3(transform.position.x, -10f, transform.position.z);
+            transform.position = new Vector3(transform.position.x, -15f, transform.position.z);
         }
         else
         {
