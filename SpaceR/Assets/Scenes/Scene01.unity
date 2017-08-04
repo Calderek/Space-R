@@ -2789,7 +2789,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 166.19997, y: -229.87502}
+  m_AnchoredPosition: {x: 166.19997, y: -229.87503}
   m_SizeDelta: {x: 292.39996, y: 75.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &710886208
@@ -3284,11 +3284,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meteorPrefabs:
-  - {fileID: 1406777104021068, guid: eb91fd7619cc87348aa192b8f29a521f, type: 2}
-  - {fileID: 1652526275604806, guid: 88aa30dab66b0014d97c869002cda4d6, type: 2}
-  - {fileID: 1190767560207430, guid: ec157369484b1c246b47b794e80aea10, type: 2}
-  - {fileID: 1389902389333626, guid: 0158558ec48e8a1428b46e9f93c91ed8, type: 2}
-  - {fileID: 1132883730023894, guid: b9068cb58b2212e40b801b1c5e965b06, type: 2}
+  - {fileID: 1942734918067250, guid: 502c4b984d92b0a4590f9fa38eac9544, type: 2}
+  - {fileID: 1872321373672896, guid: 65f005af78387cd4b8b5e8a7e893bd5a, type: 2}
+  - {fileID: 1488791267114960, guid: 6b7fdfdd8e77a8449b5dd5c8126779bc, type: 2}
+  - {fileID: 1394160950820998, guid: cc3edcc155ff56046b622a854cbfb1f4, type: 2}
+  - {fileID: 1035397063790058, guid: 203181d71a61b894fb6d8a7a7c82b505, type: 2}
+  spawnWait: 1
 --- !u!4 &854516755
 Transform:
   m_ObjectHideFlags: 0

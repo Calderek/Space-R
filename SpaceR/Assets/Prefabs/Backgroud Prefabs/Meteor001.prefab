@@ -95,4 +95,4 @@ MonoBehaviour:
   minMeteorSpeed: 10
   maxMeteorSpeed: 30
   minMeteorSize: 5
-  maxMeteorSize: 40
+  maxMeteorSize: 20
