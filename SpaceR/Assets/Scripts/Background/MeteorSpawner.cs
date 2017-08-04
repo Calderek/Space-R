@@ -29,7 +29,6 @@ public class MeteorSpawner : MonoBehaviour
         var meteor = Instantiate(meteorPrefabs[randomizedMeteorNumber], meteorSpawnPlace, transform.rotation);
 
 
-
         meteorMovementInfo = meteor.GetComponent<MeteorMovementInfo>();
 
         //Ustawienie nazwy meteora
@@ -38,19 +37,19 @@ public class MeteorSpawner : MonoBehaviour
 
         //ustawienie rozmiaru meteora 
         meteorMovementInfo.meteorSize = Random.Range(MeteorHelper.minMeteorSize, MeteorHelper.maxMeteorSize);
-        transform.localScale = new Vector3(meteorMovementInfo.meteorSize, meteorMovementInfo.meteorSize, meteorMovementInfo.meteorSize);
+        meteor.transform.localScale = new Vector3(meteorMovementInfo.meteorSize, meteorMovementInfo.meteorSize, meteorMovementInfo.meteorSize);
 
         //Ustawienie pozycji na osi Y i predkosci meteora
         //Jezeli rozmiar meteora jest duzy to bedzie poruszac sie szybko na 1 planie, mniejsze meteory beda poruszac sie w tle z mniejsza predkoscia (iluzja glebi)
         if (meteorMovementInfo.meteorSize > 13f)
         {
             meteorMovementInfo.meteorSpeed = Random.Range(MeteorHelper.minMeteorSpeed * 2f, MeteorHelper.maxMeteorSpeed);
-            transform.position = new Vector3(transform.position.x, -15f, transform.position.z);
+            meteor.transform.position = new Vector3(meteor.transform.position.x, -15f, meteor.transform.position.z);
         }
         else
         {
             meteorMovementInfo.meteorSpeed = Random.Range(MeteorHelper.minMeteorSpeed, MeteorHelper.maxMeteorSpeed / 2f);
-            transform.position = new Vector3(transform.position.x, -30f, transform.position.z);
+            meteor.transform.position = new Vector3(meteor.transform.position.x, -30f, meteor.transform.position.z);
         }
 
         //Ustawienie losowej rotacji dla meteora
