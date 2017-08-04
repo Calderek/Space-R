@@ -10,9 +10,12 @@ public class EnemySpawn : MonoBehaviour {
     private EnemyInfo enemyInfo;
     private int i = 0;
 
+    private bool invoke;
+
 	// Use this for initialization
 	void Start ()
     {
+        invoke = true;
         InvokeRepeating("CreateEnemy", 2.2f, 1.2f);
     }
 
@@ -29,9 +32,29 @@ public class EnemySpawn : MonoBehaviour {
         enemyInfo.direction = Direction;
         i++;
         enemy.tag = "enemy";
+        GameHelper.LevelStarted = true;
 
         if (i>=EnemyHelper.amount )
+        {
             CancelInvoke("CreateEnemy");
+            invoke = false;
+        }
+    }
+
+
+    void Update()
+    {
+        if(GameHelper.StartNewLevel && !invoke)
+        {
+            InvokeRepeating("CreateEnemy", 2.2f, 1.2f);
+            GameHelper.CountSpawnerInLevel++;
+            if(GameHelper.CountSpawnerInLevel==2)
+            {
+                GameHelper.CountSpawnerInLevel = 0;
+                GameHelper.StartNewLevel = false;
+            }
+
+        }
     }
 
 
