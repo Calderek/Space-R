@@ -46,6 +46,7 @@ public class EnemySpawn : MonoBehaviour {
     {
         if(GameHelper.StartNewLevel && !invoke)
         {
+            i = 0;
             InvokeRepeating("CreateEnemy", 2.2f, 1.2f);
             GameHelper.CountSpawnerInLevel++;
             if(GameHelper.CountSpawnerInLevel==2)
