@@ -21,7 +21,8 @@ GameObject:
   - component: {fileID: 4361403697630778}
   - component: {fileID: 33171469312254292}
   - component: {fileID: 23664659047646526}
-  - component: {fileID: 114610426866258898}
+  - component: {fileID: 114458800544226306}
+  - component: {fileID: 114296595542936558}
   m_Layer: 0
   m_Name: Meteor001
   m_TagString: Untagged
@@ -81,7 +82,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1942734918067250}
   m_Mesh: {fileID: 4300000, guid: db550f2538cf85e47be609642013781f, type: 3}
---- !u!114 &114610426866258898
+--- !u!114 &114296595542936558
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1942734918067250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 121469e51586e4248bb45076400cc2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meteorSpeed: 0
+  meteorRotationX: 0
+  meteorRotationY: 0
+  meteorRotationZ: 0
+  meteorSize: 0
+--- !u!114 &114458800544226306
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -92,7 +109,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f7b3830286eae146bbeb1f40e1ef055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minMeteorSpeed: 10
-  maxMeteorSpeed: 30
-  minMeteorSize: 5
-  maxMeteorSize: 20
