@@ -13,9 +13,10 @@ public class EnemySpawn : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-
         InvokeRepeating("CreateEnemy", 2.2f, 1.2f);
     }
+
+
 
     private void CreateEnemy()
     {
@@ -27,6 +28,7 @@ public class EnemySpawn : MonoBehaviour {
         enemyInfo.health = EnemyHelper.defaultHealth;
         enemyInfo.direction = Direction;
         i++;
+        enemy.tag = "enemy";
 
         if (i>=EnemyHelper.amount )
             CancelInvoke("CreateEnemy");

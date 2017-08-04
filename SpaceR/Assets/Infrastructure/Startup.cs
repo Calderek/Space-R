@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿using Assets.Helper;
+using UnityEditor;
 using UnityEngine;
 
 
@@ -12,7 +13,7 @@ public class Startup {
     // Use this for initialization
     static Startup()
     {
-        //EnemiesCreate creator = new EnemiesCreate();
-        //creator.Create();
+        GameHelper.CurrentLevel = 1;
+
     }
 }
