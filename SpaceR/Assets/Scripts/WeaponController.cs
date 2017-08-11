@@ -41,7 +41,7 @@ public class WeaponController : MonoBehaviour {
             }
         }
 
-        if(Input.GetKey(KeyCode.Space) && CanShoot)
+        if(Input.GetButton("Fire1") && CanShoot)
         {
             StartCoroutine(Fire());
         }
