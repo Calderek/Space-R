@@ -25,7 +25,10 @@ GameObject:
   - component: {fileID: 114941758269172844}
   - component: {fileID: 114499394789085092}
   - component: {fileID: 114774235868738152}
-  m_Layer: 0
+  - component: {fileID: 114345097198452476}
+  - component: {fileID: 54736566583762574}
+  - component: {fileID: 65584955879230462}
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -40,7 +43,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4110956870838874}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: spaceship (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +58,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4396053202251422}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bullet Spawn Point
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -72,7 +75,7 @@ GameObject:
   - component: {fileID: 4738539144959254}
   - component: {fileID: 33787583139274008}
   - component: {fileID: 23881743984228042}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -212,6 +215,47 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1218308920110572}
   m_Mesh: {fileID: 4300000, guid: 99b6faf76a152574294c046421ffeeff, type: 3}
+--- !u!54 &54736566583762574
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1218308920110572}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &65584955879230462
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1218308920110572}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03, y: 0.06, z: 0.01}
+  m_Center: {x: 0.11, y: 0, z: -0.0000000027939677}
+--- !u!114 &114345097198452476
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1218308920110572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 500aca53f6e94a649a3e712de3cf5257, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  explosionPrefab: {fileID: 198835770736829752, guid: cf6ac5a6a606e9340a8a1c2a666f1c41,
+    type: 2}
 --- !u!114 &114499394789085092
 MonoBehaviour:
   m_ObjectHideFlags: 1
