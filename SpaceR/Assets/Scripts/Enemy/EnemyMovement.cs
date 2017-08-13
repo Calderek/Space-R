@@ -11,11 +11,11 @@ public class EnemyMovement : MonoBehaviour {
     private bool downMove = false;
     private int rowPlace ;
     private int colPlace;
-
+    private bool isFinishPosition;
     // Use this for initialization
     void Start()
     {
-
+        isFinishPosition = false;
         var spaceInformation = GetComponent<EnemyInfo>();
         rowPlace =(int) spaceInformation.rowPlace ;
         colPlace = (int)spaceInformation.colPlace;
@@ -45,11 +45,17 @@ public class EnemyMovement : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if(isFinishPosition)
+        {
+            transform.Translate(Time.deltaTime, 0, Time.deltaTime);
+            return;
+        }
+
         float movement = Time.deltaTime * EnemyHelper.defaultVelocity;
         position = transform.position;
 
         downMove = position.z >= finishPosition.z ? true : false;
-
+        isFinishPosition = !downMove && !leftMove ? true : false; 
         switch(GetComponent<EnemyInfo>().direction)
         {
             case "left":
