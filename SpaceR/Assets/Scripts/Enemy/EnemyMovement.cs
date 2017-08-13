@@ -27,7 +27,7 @@ public class EnemyMovement : MonoBehaviour {
         {
             case "left":
                 {
-                    finishPosition.x = rowPlace * 8 - 60;
+                    finishPosition.x = -rowPlace * 8 - 16;
                     finishPosition.z = colPlace * 8 - 8;
                     break;
                 }
