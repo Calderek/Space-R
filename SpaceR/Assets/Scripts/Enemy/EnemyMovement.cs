@@ -1,7 +1,8 @@
 ﻿using Assets.Helper;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour {
+public class EnemyMovement : MonoBehaviour
+{
 
 
     private Vector3 position;
@@ -9,21 +10,40 @@ public class EnemyMovement : MonoBehaviour {
 
     private bool leftMove = false;
     private bool downMove = false;
-    private int rowPlace ;
+    private int rowPlace;
     private int colPlace;
     private bool isFinishPosition;
+
+
+    private bool changeZDirection;
+    private bool changeXDirection;
+    private int movementZIndexer;
+    private int movementXIndexer;
+
+    private int directionX;
+    private int directionZ;
+
+    private Random dictionaryMovementGenerator;
     // Use this for initialization
     void Start()
     {
+        directionX = 0;
+        directionZ = 0;
         isFinishPosition = false;
+        changeXDirection = true;
+        changeZDirection = true;
+        movementXIndexer = 0;
+        movementZIndexer = 0;
+        dictionaryMovementGenerator = new Random();
+
         var spaceInformation = GetComponent<EnemyInfo>();
-        rowPlace =(int) spaceInformation.rowPlace ;
+        rowPlace = (int)spaceInformation.rowPlace;
         colPlace = (int)spaceInformation.colPlace;
         Debug.Log(name + " movement row " + spaceInformation.rowPlace + " col" + spaceInformation.colPlace);
 
         //todo helper for placement spawn enemy
         finishPosition = new Vector3();
-        switch(spaceInformation.direction)
+        switch (spaceInformation.direction)
         {
             case "left":
                 {
@@ -33,7 +53,7 @@ public class EnemyMovement : MonoBehaviour {
                 }
             case "right":
                 {
-                    
+
                     finishPosition.x = rowPlace * 8 - 8;
                     finishPosition.z = colPlace * 8 - 8;
                     break;
@@ -45,9 +65,29 @@ public class EnemyMovement : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if(isFinishPosition)
+        if (isFinishPosition)
         {
-            transform.Translate(Time.deltaTime, 0, Time.deltaTime);
+
+            if (changeXDirection)
+            {
+                directionX = Random.Range(0, 1000) % 2 == 0 ? 1 : -1;
+                movementXIndexer = 0;
+            }
+
+            if (changeZDirection)
+            {
+                directionZ = Random.Range(0, 1000) % 2 == 0 ? 1 : -1;
+                movementZIndexer = 0;
+            }
+
+
+            changeXDirection = movementXIndexer >= 100 ? true : false;
+            changeZDirection = movementZIndexer >= 200 ? true : false;
+            movementXIndexer++;
+            movementZIndexer++;
+
+
+            transform.Translate(directionX * Time.deltaTime * 3, 0, directionZ * Time.deltaTime * 2);
             return;
         }
 
@@ -55,8 +95,8 @@ public class EnemyMovement : MonoBehaviour {
         position = transform.position;
 
         downMove = position.z >= finishPosition.z ? true : false;
-        isFinishPosition = !downMove && !leftMove ? true : false; 
-        switch(GetComponent<EnemyInfo>().direction)
+        isFinishPosition = !downMove && !leftMove ? true : false;
+        switch (GetComponent<EnemyInfo>().direction)
         {
             case "left":
                 {
@@ -71,7 +111,7 @@ public class EnemyMovement : MonoBehaviour {
 
                         if (leftMove)
                         {
-                            transform.Translate(movement,0, 0);
+                            transform.Translate(movement, 0, 0);
 
                         }
                     }
