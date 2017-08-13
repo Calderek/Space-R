@@ -5,6 +5,7 @@ public class MeteorSpawner : MonoBehaviour
 {
     
     public GameObject[] meteorPrefabs;
+    public GameObject starsPrefabs;
     public float spawnWait=1f; // zmienna wyznaczajaca czas miedzy spawnem meteorow
     private int i;
     private int randomizedMeteorNumber; // do losowania jednego z meteorow z puli Prefabow
@@ -12,6 +13,7 @@ public class MeteorSpawner : MonoBehaviour
 
     void Start()
     {
+        var stars = Instantiate(starsPrefabs);
         InvokeRepeating("SpawnMeteor", 0f, spawnWait);
     }
 
@@ -22,7 +24,7 @@ public class MeteorSpawner : MonoBehaviour
         randomizedMeteorNumber = Random.Range(0, 5);
        
         //losuje polozenie meteora troche nad ekranem
-        Vector3 meteorSpawnPlace = new Vector3(Random.Range(-130.0f, 120.0f), -30f, 120f);
+        Vector3 meteorSpawnPlace = new Vector3(Random.Range(-170.0f, 170.0f), -30f, 120f);
 
         //tworzy meteor
         var meteor = Instantiate(meteorPrefabs[randomizedMeteorNumber], meteorSpawnPlace, transform.rotation);
