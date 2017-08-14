@@ -34,7 +34,7 @@ public class EnemyShooting : MonoBehaviour
             Vector3 offset = transform.rotation * bulletOffset;
 
             GameObject bullet = (GameObject)Instantiate(bulletPrefab, transform.position + offset, transform.rotation);
-            bullet.layer = gameObject.layer;
+            bullet.layer = LayerMask.NameToLayer("Enemy Bullet");
 
             fireDelay = random.Next(1, 30);
         }

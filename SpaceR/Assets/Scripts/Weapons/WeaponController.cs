@@ -61,6 +61,7 @@ public class WeaponController : MonoBehaviour {
 
         var bullet = Instantiate(oWeapon, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
         bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * oVelocity;
+        bullet.layer = LayerMask.NameToLayer("Player Bullet");
 
         CanShoot = false;
         yield return new WaitForSeconds(oRof);
