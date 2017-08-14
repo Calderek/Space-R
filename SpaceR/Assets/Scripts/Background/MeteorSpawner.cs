@@ -6,7 +6,7 @@ public class MeteorSpawner : MonoBehaviour
     
     public GameObject[] meteorPrefabs;
     public GameObject starsPrefabs;
-    public float spawnWait=1f; // zmienna wyznaczajaca czas miedzy spawnem meteorow
+    public float spawnWait=0.5f; // zmienna wyznaczajaca czas miedzy spawnem meteorow
     private int i;
     private int randomizedMeteorNumber; // do losowania jednego z meteorow z puli Prefabow
     private MeteorMovementInfo meteorMovementInfo;

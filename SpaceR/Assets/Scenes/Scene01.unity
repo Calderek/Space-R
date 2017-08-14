@@ -3187,7 +3187,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 163.80002, y: -339.65735}
+  m_AnchoredPosition: {x: 163.80002, y: -339.65732}
   m_SizeDelta: {x: 287.6, y: 9.48538}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &835772241
@@ -3419,7 +3419,7 @@ MonoBehaviour:
   - {fileID: 1035397063790058, guid: 203181d71a61b894fb6d8a7a7c82b505, type: 2}
   starsPrefabs: {fileID: 1230325963477352, guid: eb519f7af34e17c46bb33acea8e0bab4,
     type: 2}
-  spawnWait: 1
+  spawnWait: 0.5
 --- !u!4 &854516755
 Transform:
   m_ObjectHideFlags: 0
