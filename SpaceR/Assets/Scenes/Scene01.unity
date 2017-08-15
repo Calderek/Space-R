@@ -1267,6 +1267,8 @@ MonoBehaviour:
   - {fileID: 1537275041371570, guid: df7a5c85007f96940b7bf5010fa28bc6, type: 2}
   - {fileID: 1239657983654710, guid: 8e957a64fdb2f0641992914894d8eeec, type: 2}
   - {fileID: 1138607936230904, guid: 45ddbee4d6e0f3248a95677bb857ffa0, type: 2}
+  - {fileID: 1858304965923130, guid: 2eab03aeff0fe6342848a9ebc3243733, type: 2}
+  - {fileID: 1728747534901386, guid: 221b70293960394458735e09515df794, type: 2}
   spawnWait: 60
 --- !u!4 &305739604
 Transform:

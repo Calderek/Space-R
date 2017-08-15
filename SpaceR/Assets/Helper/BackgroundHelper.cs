@@ -8,7 +8,7 @@
         public const float minMeteorSize = 5f;
         public const float maxMeteorSize = 15f;
 
-        public const float minGalaxySpeed = 2f;
+        public const float minGalaxySpeed = 1f;
         public const float maxGalaxySpeed = 3f;
 
         public const float minGalaxySize = 20f;

@@ -26,7 +26,10 @@ public class MeteorMovement : MonoBehaviour
         position = transform.position;
         transform.Translate(0, 0, -1 * meteorSpeed *Time.deltaTime, Space.World);
         transform.Rotate(meteorRotationX * Time.deltaTime, meteorRotationY * Time.deltaTime, meteorRotationZ * Time.deltaTime);
-        Destroy(gameObject, 50);
+        if (transform.position.z < -150f && transform.position.z>-160f)
+        {
+            Destroy(gameObject);
+        }
     }
    
    

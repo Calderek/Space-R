@@ -9,46 +9,46 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1872321373672896}
+  m_RootGameObject: {fileID: 1728747534901386}
   m_IsPrefabParent: 1
---- !u!1 &1872321373672896
+--- !u!1 &1728747534901386
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4863239040959378}
-  - component: {fileID: 33636226100726672}
-  - component: {fileID: 23801304696810572}
-  - component: {fileID: 114316633359801664}
-  - component: {fileID: 114399584305954076}
+  - component: {fileID: 4315442346120132}
+  - component: {fileID: 33856203569964776}
+  - component: {fileID: 23870013205492550}
+  - component: {fileID: 114788673523027192}
+  - component: {fileID: 114146350287843320}
   m_Layer: 0
-  m_Name: Meteor002
+  m_Name: Galaxy5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4863239040959378
+--- !u!4 &4315442346120132
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1872321373672896}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.0799082, y: 0.057045184, z: -0.044658903}
+  m_GameObject: {fileID: 1728747534901386}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23801304696810572
+--- !u!23 &23870013205492550
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1872321373672896}
+  m_GameObject: {fileID: 1728747534901386}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -56,7 +56,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 828f3749c1b6d8f4eb9fad1e751b368d, type: 2}
+  - {fileID: 2100000, guid: cae117ce462c72646808971beaf79fea, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
+  m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_SelectedEditorRenderState: 3
@@ -75,30 +75,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33636226100726672
+--- !u!33 &33856203569964776
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1872321373672896}
-  m_Mesh: {fileID: 4300000, guid: c74d2407d2c9a7a408dea86ab90eb90f, type: 3}
---- !u!114 &114316633359801664
+  m_GameObject: {fileID: 1728747534901386}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114146350287843320
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1872321373672896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5838e86f35eeef4795c8590e6c8f6da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114399584305954076
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1872321373672896}
+  m_GameObject: {fileID: 1728747534901386}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5c5c3f39635b8d47befc8b4a0c196f1, type: 3}
@@ -109,3 +98,14 @@ MonoBehaviour:
   objectRotationY: 0
   objectRotationZ: 0
   objectSize: 0
+--- !u!114 &114788673523027192
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1728747534901386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e550429fa41e3844a47997b979b31d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

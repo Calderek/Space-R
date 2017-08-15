@@ -81,7 +81,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 50
+      scalar: 200
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -122,8 +122,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.1
-      minScalar: 0.05
+      scalar: 0.02
+      minScalar: 0.005
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -171,7 +171,7 @@ ParticleSystem:
         key1: {r: 0.19215687, g: 0.19607843, b: 0.53333336, a: 1}
         key2: {r: 0.30588236, g: 0.19607843, b: 0.27450982, a: 1}
         key3: {r: 0.5294118, g: 0.3137255, b: 0.6313726, a: 0}
-        key4: {r: 0.03137255, g: 0.03529412, b: 0.15686275, a: 0}
+        key4: {r: 0.75, g: 0.79310346, b: 1, a: 0}
         key5: {r: 0.526, g: 0.464, b: 1, a: 0}
         key6: {r: 1, g: 0.241, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
@@ -226,26 +226,32 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.01
+      scalar: 0.003
       minScalar: 0.001
       maxCurve:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 2
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 1
+          time: 0.0023141084
+          value: 0.063265115
+          inSlope: -0.034150198
+          outSlope: -0.034150198
+          tangentMode: 0
+        - serializedVersion: 2
+          time: 0.99826574
+          value: 0.06326294
+          inSlope: -0.09993977
+          outSlope: -0.09993977
           tangentMode: 0
         - serializedVersion: 2
           time: 1
-          value: 1
-          inSlope: 1
-          outSlope: 0
+          value: 0.18529654
+          inSlope: 1.0874257
+          outSlope: 1.0874257
           tangentMode: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
-        m_RotationOrder: 4
+        m_RotationOrder: 0
       minCurve:
         serializedVersion: 2
         m_Curve:
@@ -470,7 +476,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 20000
+    maxNumParticles: 2000000
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -631,7 +637,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 100
+      scalar: 50
       minScalar: 500
       maxCurve:
         serializedVersion: 2

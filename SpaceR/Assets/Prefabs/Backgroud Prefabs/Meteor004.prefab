@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4930276824327462}
   - component: {fileID: 33067203276887044}
   - component: {fileID: 23804542712870220}
-  - component: {fileID: 114133395071448644}
+  - component: {fileID: 114789752550843462}
   - component: {fileID: 114741268503137358}
   m_Layer: 0
   m_Name: Meteor004
@@ -82,17 +82,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1394160950820998}
   m_Mesh: {fileID: 4300000, guid: 843307524415cb14f8efaba755e30211, type: 3}
---- !u!114 &114133395071448644
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1394160950820998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0c8e03f03dcabe4eaab32e81067a200, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114741268503137358
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -109,3 +98,14 @@ MonoBehaviour:
   objectRotationY: 0
   objectRotationZ: 0
   objectSize: 0
+--- !u!114 &114789752550843462
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1394160950820998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5838e86f35eeef4795c8590e6c8f6da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

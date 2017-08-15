@@ -22,7 +22,11 @@ public class GalaxyMovement : MonoBehaviour
         position = transform.position;
         transform.Translate(0, 0, -1 * galaxySpeed * Time.deltaTime, Space.World);
         transform.Rotate(0f, galaxyRotationY * Time.deltaTime, 0f);
-        Destroy(gameObject, 500);
+
+        if (transform.position.z < -200f && transform.position.z > -210f)
+        {
+            Destroy(gameObject);
+        }
     }
 
 
