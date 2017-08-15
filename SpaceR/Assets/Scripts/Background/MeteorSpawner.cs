@@ -10,9 +10,22 @@ public class MeteorSpawner : MonoBehaviour
     private int i;
     private int randomizedMeteorNumber; // do losowania jednego z meteorow z puli Prefabow
     private MeteorMovementInfo meteorMovementInfo;
+    private float xRangeLeft, xRangeRight, zRangeUp, zRangeDown; // Zmienne do ustalenia granic pozycji losowanych meteorów
 
     void Start()
     {
+        //Towrzy pierwsze 30 meteorow na planszy
+        xRangeLeft = -170f;
+        xRangeRight = 170f;
+        zRangeUp = 120f;
+        zRangeDown = -90f;
+        for(int a=0; a<30; a++)
+        {
+            SpawnMeteor();
+        }
+
+        //Inicjuje Tworzenie sie gwiazd i generowanie meteorow co spawnWait
+        zRangeDown = 120f;
         var stars = Instantiate(starsPrefabs);
         InvokeRepeating("SpawnMeteor", 0f, spawnWait);
     }
@@ -24,7 +37,7 @@ public class MeteorSpawner : MonoBehaviour
         randomizedMeteorNumber = Random.Range(0, 5);
        
         //losuje polozenie meteora troche nad ekranem
-        Vector3 meteorSpawnPlace = new Vector3(Random.Range(-170.0f, 170.0f), -30f, 120f);
+        Vector3 meteorSpawnPlace = new Vector3(Random.Range(xRangeLeft, xRangeRight), -30f, Random.Range(zRangeDown, zRangeUp));
 
         //tworzy meteor
         var meteor = Instantiate(meteorPrefabs[randomizedMeteorNumber], meteorSpawnPlace, transform.rotation);
