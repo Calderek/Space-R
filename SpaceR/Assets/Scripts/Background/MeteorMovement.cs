@@ -10,16 +10,16 @@ public class MeteorMovement : MonoBehaviour
     private float meteorRotationY;
     private float meteorRotationZ;
 
-    private MeteorMovementInfo meteorMovementInfo;
+    private BackgroundMovementInfo backgroundMovementInfo;
     private Vector3 position;
 
     void Start ()
     {
-        var meteorInformation = GetComponent<MeteorMovementInfo>();
-        meteorRotationX = meteorInformation.meteorRotationX;
-        meteorRotationY = meteorInformation.meteorRotationY;
-        meteorRotationZ = meteorInformation.meteorRotationZ;
-        meteorSpeed = meteorInformation.meteorSpeed;
+        var meteorInformation = GetComponent<BackgroundMovementInfo>();
+        meteorRotationX = meteorInformation.objectRotationX;
+        meteorRotationY = meteorInformation.objectRotationY;
+        meteorRotationZ = meteorInformation.objectRotationZ;
+        meteorSpeed = meteorInformation.objectSpeed;
     }
     void Update()
     {
