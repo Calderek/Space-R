@@ -101,11 +101,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1394160950820998}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 121469e51586e4248bb45076400cc2a0, type: 3}
+  m_Script: {fileID: 11500000, guid: e5c5c3f39635b8d47befc8b4a0c196f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meteorSpeed: 0
-  meteorRotationX: 0
-  meteorRotationY: 0
-  meteorRotationZ: 0
-  meteorSize: 0
+  objectSpeed: 0
+  objectRotationX: 0
+  objectRotationY: 0
+  objectRotationZ: 0
+  objectSize: 0
