@@ -21,10 +21,12 @@ public class EnemyDestruction : MonoBehaviour {
 
     private void OnCollisionEnter(Collision coll)
     {
+        var hit = coll.collider.tag;
+
         Debug.Log("Otrzymano trafienie.");
         for(int i = 0; i < list.weaponList.Count; i++)
         {
-            var hit = coll.collider.tag;
+            
             oCollider = list.weaponList.Select(x => list.weaponList[i].Weapon.tag).First();
             oDamage = list.weaponList.Select(x => list.weaponList[i].Damage).First();
 
@@ -36,7 +38,7 @@ public class EnemyDestruction : MonoBehaviour {
             }
         }
 
-        if(info.health <= 0)
+        if(info.health <= 0 )
         {
             Explode();
         }
