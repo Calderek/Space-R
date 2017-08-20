@@ -6,7 +6,6 @@ public class WeaponConstructor : MonoBehaviour {
 
     public GameObject Weapon { get; set; }
     public int Damage { get; set; }
-    //public int Ammo { get; set; }
     public float RoF { get; set; }
     public float Velocity { get; set; }
     public float LifeTime { get; set; }
@@ -15,7 +14,6 @@ public class WeaponConstructor : MonoBehaviour {
     {
         this.Weapon = weapon;
         this.Damage = damage;
-        //this.Ammo = ammo;
         this.RoF = rof;
         this.Velocity = velocity;
         this.LifeTime = lifetime;

@@ -18,8 +18,6 @@ public class PlayerDestruction : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        var hit = collision.collider.tag;
-
         Instantiate(expPrefab, transform.position, transform.rotation);
         Destroy(gameObject);
     }

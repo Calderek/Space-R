@@ -10,7 +10,6 @@ public class WeaponList : MonoBehaviour {
     [Header("Laser attributes")]
     public GameObject laserPrefab;
     public int l_damage=1;
-    //public int l_ammo = 100;
     public float l_rof=0.2f;
     public float l_velocity=50;
     public float l_lifetime=2.5f;
@@ -18,7 +17,6 @@ public class WeaponList : MonoBehaviour {
     [Header("Rocket attributes")]
     public GameObject rocketPrefab;
     public int r_damage=3;
-    //public int r_ammo = 500;
     public float r_rof=1.0f;
     public float r_velocity=50;
     public float r_lifetime=2.5f;

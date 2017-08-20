@@ -22,7 +22,8 @@ public class WeaponController : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        list = GetComponent<WeaponList>();
+        var armory = GameObject.FindWithTag("Armory");
+        list = armory.GetComponent<WeaponList>();
     }
 	
 	// Update is called once per frame

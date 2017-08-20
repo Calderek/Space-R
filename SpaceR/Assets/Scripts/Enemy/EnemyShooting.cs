@@ -20,8 +20,8 @@ public class EnemyShooting : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        var player = GameObject.FindWithTag("Player");
-        list = player.GetComponent<WeaponList>();
+        var armory = GameObject.FindWithTag("Armory");
+        list = armory.GetComponent<WeaponList>();
 
         random = new System.Random();
         fireDelay = random.Next(1, 20);
