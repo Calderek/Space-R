@@ -23,8 +23,6 @@ GameObject:
   - component: {fileID: 23411187017753414}
   - component: {fileID: 114992333837207292}
   - component: {fileID: 114941758269172844}
-  - component: {fileID: 114499394789085092}
-  - component: {fileID: 114774235868738152}
   - component: {fileID: 65741096124423040}
   - component: {fileID: 114048939639769944}
   m_Layer: 9
@@ -239,41 +237,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   expPrefab: {fileID: 198835770736829752, guid: cf6ac5a6a606e9340a8a1c2a666f1c41,
     type: 2}
---- !u!114 &114499394789085092
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1218308920110572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20f861975f05a204aa7a7b8c4f4c0b16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponList: []
-  laserPrefab: {fileID: 1024462663202978, guid: c5ed3c6bdc581dc47842befa0caa2ada,
-    type: 2}
-  l_damage: 1
-  l_rof: 0.2
-  l_velocity: 50
-  l_lifetime: 2.5
-  rocketPrefab: {fileID: 1444825322078056, guid: f46002eac86d1a84dbcc6c15847d1e55,
-    type: 2}
-  r_damage: 3
-  r_rof: 1
-  r_velocity: 50
-  r_lifetime: 2.5
---- !u!114 &114774235868738152
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1218308920110572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e74985f1de160f45be0ec004e92c78f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114941758269172844
 MonoBehaviour:
   m_ObjectHideFlags: 1

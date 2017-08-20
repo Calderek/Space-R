@@ -13,8 +13,8 @@ public class EnemyDestruction : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        var player = GameObject.FindWithTag("Player");
-        list = player.GetComponent<WeaponList>();
+        var armory = GameObject.FindWithTag("Armory");
+        list = armory.GetComponent<WeaponList>();
 
         info = GetComponent<EnemyInfo>();
 	}
