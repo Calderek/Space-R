@@ -1,106 +1,50 @@
 ﻿using Assets.Helper;
+using Assets.LogicModel.Enemy;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-
 
     private Vector3 position;
     private Vector3 finishPosition;
 
     private bool leftMove = false;
     private bool downMove = false;
-    private int rowPlace;
-    private int colPlace;
+
+    private EnemyMapPosition targetPosition;
+
+
     private bool isFinishPosition;
 
+    private EnemyVibration vibration;
 
-    private bool changeZDirection;
-    private bool changeXDirection;
-    private int movementZIndexer;
-    private int movementXIndexer;
 
-    private int directionX;
-    private int directionZ;
-
-    private Random dictionaryMovementGenerator;
-    // Use this for initialization
     void Start()
     {
-        directionX = 0;
-        directionZ = 0;
-        isFinishPosition = false;
-        changeXDirection = true;
-        changeZDirection = true;
-        movementXIndexer = 0;
-        movementZIndexer = 0;
-        dictionaryMovementGenerator = new Random();
-
-        var spaceInformation = GetComponent<EnemyInfo>();
-        rowPlace = (int)spaceInformation.rowPlace;
-        colPlace = (int)spaceInformation.colPlace;
-        Debug.Log(name + " movement row " + spaceInformation.rowPlace + " col" + spaceInformation.colPlace);
-
-        //todo helper for placement spawn enemy
-        finishPosition = new Vector3();
-        switch (spaceInformation.direction)
-        {
-            case "left":
-                {
-                    finishPosition.x = -rowPlace * 8 - 16;
-                    finishPosition.z = colPlace * 8 - 8;
-                    break;
-                }
-            case "right":
-                {
-
-                    finishPosition.x = rowPlace * 8 - 8;
-                    finishPosition.z = colPlace * 8 - 8;
-                    break;
-                }
-        }
-        finishPosition.y = 0;
+        InitializeMovementControl();
+        SetTargetPosition();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (isFinishPosition)
         {
-
-            if (changeXDirection)
-            {
-                directionX = Random.Range(0, 1000) % 2 == 0 ? 1 : -1;
-                movementXIndexer = 0;
-            }
-
-            if (changeZDirection)
-            {
-                directionZ = Random.Range(0, 1000) % 2 == 0 ? 1 : -1;
-                movementZIndexer = 0;
-            }
-
-
-            changeXDirection = movementXIndexer >= 100 ? true : false;
-            changeZDirection = movementZIndexer >= 200 ? true : false;
-            movementXIndexer++;
-            movementZIndexer++;
-
-
-            transform.Translate(directionX * Time.deltaTime * 3, 0, directionZ * Time.deltaTime * 2);
+            if(EnemyHelper.vibrateEnable)
+                VibrateShip();
             return;
         }
 
         float movement = Time.deltaTime * EnemyHelper.defaultVelocity;
         position = transform.position;
 
-        downMove = position.z >= finishPosition.z ? true : false;
+        downMove = position.z >= targetPosition.Z ? true : false;
         isFinishPosition = !downMove && !leftMove ? true : false;
         switch (GetComponent<EnemyInfo>().direction)
         {
             case "left":
                 {
-                    leftMove = position.x >= finishPosition.x ? false : true;
+                    leftMove = position.x >= targetPosition.X ? false : true;
 
                     if (downMove)
                     {
@@ -122,7 +66,7 @@ public class EnemyMovement : MonoBehaviour
             case "right":
                 {
                     //Wylicza czy statek powinien poruszać się w lewo. Jeżeli obecna pozycja jest wieksza od końcowej to się powinien poruszać
-                    leftMove = position.x >= finishPosition.x ? true : false;
+                    leftMove = position.x >= targetPosition.X ? true : false;
 
                     if (downMove)
                     {
@@ -139,4 +83,69 @@ public class EnemyMovement : MonoBehaviour
                 }
         }
     }
+
+    private void InitializeMovementControl()
+    {
+        //When spaceship was created, it can't be in target position. It first must arrive to end position
+        isFinishPosition = false;
+        InitializeVibrationControl();
+
+    }
+
+    /// <summary>
+    /// Set controls about vibration enable mode
+    /// </summary>
+    private void InitializeVibrationControl()
+    {
+        vibration = new EnemyVibration();
+        vibration.Enable = true;
+
+    }
+
+    private void SetTargetPosition()
+    {
+        targetPosition = new EnemyMapPosition();
+        var spaceInformation = GetComponent<EnemyInfo>();
+        targetPosition.RowPlace = (int)spaceInformation.rowPlace;
+        targetPosition.ColPlace = (int)spaceInformation.colPlace;
+        targetPosition.SetPositionFromMatrixPlace(spaceInformation.direction);
+    }
+
+    /// <summary>
+    /// Slightly move shipspace when was in target place
+    /// </summary>
+    private void VibrateShip()
+    {
+        if (vibration.OnChangeX)
+        {
+            vibration.DirectionX = (int)vibration.SetDirectionVibrate();
+            vibration.IndexerX = 0;
+        }
+
+        if (vibration.OnChangeZ)
+        {
+
+            vibration.DirectionZ = (int)vibration.SetDirectionVibrate();
+            vibration.IndexerX = 0;
+        }
+
+        vibration.OnChangeX = vibration.IndexerX >= 100 ? true : false;
+        vibration.OnChangeZ = vibration.IndexerX >= 200 ? true : false;
+
+        vibration.IndexerX++;
+        vibration.IndexerZ++;
+
+
+        transform.Translate(vibration.DirectionX * Time.deltaTime * 3, 0, vibration.DirectionZ * Time.deltaTime * 2);
+    }
+
+
+
+    
+
+
+   
+
+
+
 }
