@@ -116,26 +116,10 @@ public class EnemyMovement : MonoBehaviour
     /// </summary>
     private void VibrateShip()
     {
-        if (vibration.OnChangeX)
+        if (vibration.Enable)
         {
-            vibration.DirectionX = (int)vibration.SetDirectionVibrate();
-            vibration.IndexerX = 0;
+            vibration.Vibrate();
         }
-
-        if (vibration.OnChangeZ)
-        {
-
-            vibration.DirectionZ = (int)vibration.SetDirectionVibrate();
-            vibration.IndexerX = 0;
-        }
-
-        vibration.OnChangeX = vibration.IndexerX >= 100 ? true : false;
-        vibration.OnChangeZ = vibration.IndexerX >= 200 ? true : false;
-
-        vibration.IndexerX++;
-        vibration.IndexerZ++;
-
-
         transform.Translate(vibration.DirectionX * Time.deltaTime * 3, 0, vibration.DirectionZ * Time.deltaTime * 2);
     }
 

@@ -53,5 +53,30 @@ namespace Assets.LogicModel.Enemy
             }
         }
 
+        public void Vibrate()
+        {
+            if (OnChangeX)
+            {
+                DirectionX = (int)SetDirectionVibrate();
+                IndexerX = 0;
+            }
+
+            if (OnChangeZ)
+            {
+
+                DirectionZ = (int)SetDirectionVibrate();
+                IndexerX = 0;
+            }
+
+            OnChangeX = IndexerX >= 100 ? true : false;
+            OnChangeZ = IndexerX >= 200 ? true : false;
+
+            IndexerX++;
+            IndexerZ++;
+        }
+
+
+
+
     }
 }
