@@ -18,15 +18,15 @@ public class EnemyDestruction : MonoBehaviour {
 
         info = GetComponent<EnemyInfo>();
 	}
-
+	
     //UWAGA, jeżeli dodacie nową broń to pamiętajcie żeby nadać jej unikalny tag w oknie inspektora, inaczej nie będzie obrażeń
 
-    private void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision coll)
     {
         Debug.Log("Otrzymano trafienie.");
-        for (int i = 0; i < list.weaponList.Count; i++)
+        for(int i = 0; i < list.weaponList.Count; i++)
         {
-            var hit = other.tag;
+            var hit = coll.collider.tag;
             oCollider = list.weaponList.Select(x => list.weaponList[i].Weapon.tag).First();
             oDamage = list.weaponList.Select(x => list.weaponList[i].Damage).First();
 
@@ -35,14 +35,9 @@ public class EnemyDestruction : MonoBehaviour {
                 Debug.Log("Trafienie weszło za " + oDamage);
                 info.health -= oDamage;
             }
-
-            if(hit == "Player")
-            {
-                info.health = 0;
-            }
         }
 
-        if (info.health <= 0)
+        if(info.health <= 0)
         {
             Explode();
         }
