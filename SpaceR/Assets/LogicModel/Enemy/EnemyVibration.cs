@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using Assets.Helper;
+using UnityEngine;
+
 
 namespace Assets.LogicModel.Enemy
 {
@@ -23,6 +25,33 @@ namespace Assets.LogicModel.Enemy
         public int DirectionZ { get; set; }
         public bool Enable { get; set; }
 
+        public int HorizontalVelocity { get; set; }
+        public int VerticalVelocity { get; set; }
+
+
+        /// <summary>
+        /// Main logic to vibrate shipspace. This method count and evaluate direction movement during the vibration.
+        /// </summary>
+        public void Vibrate()
+        {
+            if (OnChangeX)
+            {
+                DirectionX = (int)SetVibrateDirection();
+                ResertIndexerX();
+            }
+
+            if (OnChangeZ)
+            {
+                DirectionZ = (int)SetVibrateDirection();
+                ResertIndexerZ();
+            }
+
+            CheckFullIndexer();
+
+            IndexerX++;
+            IndexerZ++;
+        }
+
 
         public EnemyVibration()
         {
@@ -32,51 +61,56 @@ namespace Assets.LogicModel.Enemy
             OnChangeZ = true;
             IndexerX = 0;
             IndexerZ = 0;
+            HorizontalVelocity = EnemyHelper.VibrationVelocityX;
+            VerticalVelocity = EnemyHelper.VibrationVelocityZ;
         }
 
-        public enum DirectionMovement
+
+        public void InitializeVibration()
         {
-            left = -1, none, right
+            DirectionX = 0;
+            DirectionZ = 0;
+            OnChangeX = true;
+            OnChangeZ = true;
+            IndexerX = 0;
+            IndexerZ = 0;
         }
 
-        public DirectionMovement SetDirectionVibrate()
+        
+
+        public EnumHelper.HorizontalDirectionMovement SetVibrateDirection()
         {
             int randomMode = Random.Range(0, 1000) % 3;
             switch (randomMode)
             {
                 case 1:
-                    return DirectionMovement.left;
+                    return EnumHelper.HorizontalDirectionMovement.left;
                 case 2:
-                    return DirectionMovement.right;
+                    return EnumHelper.HorizontalDirectionMovement.right;
                 default:
-                    return DirectionMovement.none;
+                    return EnumHelper.HorizontalDirectionMovement.none;
             }
         }
 
-        public void Vibrate()
+        
+
+        /// <summary>
+        /// Check when vibration indexers has maximum value. When has set condition OnChange to rue value
+        /// </summary>
+        private void CheckFullIndexer()
         {
-            if (OnChangeX)
-            {
-                DirectionX = (int)SetDirectionVibrate();
-                IndexerX = 0;
-            }
-
-            if (OnChangeZ)
-            {
-
-                DirectionZ = (int)SetDirectionVibrate();
-                IndexerX = 0;
-            }
-
-            OnChangeX = IndexerX >= 100 ? true : false;
-            OnChangeZ = IndexerX >= 200 ? true : false;
-
-            IndexerX++;
-            IndexerZ++;
+            OnChangeX = IndexerX >= EnemyHelper.VibrationFrequencyX ? true : false;
+            OnChangeZ = IndexerZ >= EnemyHelper.VibrationFrequencyZ ? true : false;
         }
 
-
-
+        private void ResertIndexerZ()
+        {
+            IndexerZ = 0;
+        }
+        private void ResertIndexerX()
+        {
+            IndexerX = 0;
+        }
 
     }
 }
