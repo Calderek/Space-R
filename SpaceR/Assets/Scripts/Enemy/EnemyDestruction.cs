@@ -36,6 +36,8 @@ public class EnemyDestruction : MonoBehaviour {
                 info.health -= oDamage;
                 break;
             }
+            else if (hit == "Player")
+                info.health = 0;
         }
 
         if(info.health <= 0 )
