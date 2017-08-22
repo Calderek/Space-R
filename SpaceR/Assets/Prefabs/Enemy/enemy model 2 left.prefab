@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114609231206622024}
   - component: {fileID: 114328647746610912}
   - component: {fileID: 65391176425283390}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: enemy model 2 left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,8 +124,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletOffset: {x: 0, y: 0, z: 0.5}
-  bulletPrefab: {fileID: 1838357973675634, guid: 7c947f8d92c4b354f932e85a196d9337,
-    type: 2}
   fireDelay: 0
 --- !u!114 &114609231206622024
 MonoBehaviour:

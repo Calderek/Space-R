@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114464085752293488}
   - component: {fileID: 114130121753556884}
   - component: {fileID: 114034407533478380}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: enemy 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,6 +120,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 673ee40b4904d064e9f77a80a965a8ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  list: {fileID: 114499394789085092, guid: ef34f688a1f60614eb819ca77ea7ac1a, type: 2}
   explosionPrefab: {fileID: 198835770736829752, guid: cf6ac5a6a606e9340a8a1c2a666f1c41,
     type: 2}

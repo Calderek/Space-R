@@ -13,19 +13,17 @@ public class WeaponController : MonoBehaviour {
     private bool CanShoot = true;
 
     private GameObject oWeapon;
-    private int oDamage;
-    private int oAmmo;
     private float oVelocity;
     private float oRof;
     private float oLifeTime;
+
     //###########################################################################################################
 
     // Use this for initialization
     void Start ()
     {
-        list = GetComponent<WeaponList>();
-
-        SwitchWeapon(currentWeaponIndex);
+        var armory = GameObject.FindWithTag("Armory");
+        list = armory.GetComponent<WeaponList>();
     }
 	
 	// Update is called once per frame
@@ -36,12 +34,10 @@ public class WeaponController : MonoBehaviour {
             if (Input.GetKeyDown("" + i))
             {
                 currentWeaponIndex = i - 1;
-
-                SwitchWeapon(currentWeaponIndex);
             }
         }
 
-        if(Input.GetKey(KeyCode.Space) && CanShoot)
+        if(Input.GetButton("Fire1") && CanShoot)
         {
             StartCoroutine(Fire());
         }
@@ -49,19 +45,9 @@ public class WeaponController : MonoBehaviour {
 
     //#############################################################################################################
 
-    void SwitchWeapon(int currentWeaponIndex)
+    private void OnTriggerEnter(Collider other)
     {
-        for (int i = 0; i < list.weaponList.Count; i++)
-        {
-            if (i == currentWeaponIndex)
-            {
-              //  list.weaponList[i].gameObject.SetActive(true);
-            }
-            else
-            {
-              //  list.weaponList[i].gameObject.SetActive(false);
-            }
-        }
+        
     }
 
     public IEnumerator Fire()
@@ -70,10 +56,10 @@ public class WeaponController : MonoBehaviour {
         oRof = list.weaponList.Select(x => list.weaponList[currentWeaponIndex].RoF).First();
         oLifeTime = list.weaponList.Select(x => list.weaponList[currentWeaponIndex].LifeTime).First();
         oWeapon = list.weaponList.Select(x => list.weaponList[currentWeaponIndex].Weapon).First();
-        //oAmmo = list.weaponList.Select(x => list.weaponList[currentWeaponIndex].Ammo).First();
 
         var bullet = Instantiate(oWeapon, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
         bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * oVelocity;
+        bullet.layer = LayerMask.NameToLayer("Player Bullet");
 
         CanShoot = false;
         yield return new WaitForSeconds(oRof);
