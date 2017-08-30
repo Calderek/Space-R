@@ -118,9 +118,10 @@ public class EnemyMovement : MonoBehaviour
     {
         if (vibration.Enable)
         {
+            vibration.EnemyPosition = transform.position;
             vibration.Vibrate();
         }
-        transform.Translate(vibration.DirectionX * Time.deltaTime * 3, 0, vibration.DirectionZ * Time.deltaTime * 2);
+        transform.Translate(vibration.DirectionX * Time.deltaTime * vibration.HorizontalVelocity, 0, vibration.DirectionZ * Time.deltaTime * vibration.VerticalVelocity);
     }
 
 
