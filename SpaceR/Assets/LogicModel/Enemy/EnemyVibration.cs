@@ -116,9 +116,33 @@ namespace Assets.LogicModel.Enemy
         /// <returns></returns>
         private bool CheckBorderX()
         {
-            return EnemyPosition.x <= EnemyHelper.EnemyBorderRight
-                && EnemyPosition.x >= EnemyHelper.EnemyBorderLeft
-                ? true : false;  
+
+
+
+            var goodArea = EnemyPosition.x <= EnemyHelper.EnemyBorderRight
+                && EnemyPosition.x >= EnemyHelper.EnemyBorderLeft;
+                
+            
+            if(goodArea)
+            {
+                
+                return true;
+            }
+            else
+            {
+                
+
+                var shouldChageDirection = EnemyPosition.x > EnemyHelper.EnemyBorderRight &&
+                    DirectionX == (int)EnumHelper.HorizontalDirectionMovement.right;
+                if (shouldChageDirection) return false;
+                shouldChageDirection = EnemyPosition.x < EnemyHelper.EnemyBorderLeft &&
+                    DirectionX == (int)EnumHelper.HorizontalDirectionMovement.left;
+                if (shouldChageDirection) return false;
+
+                return true;
+            }
+            
+             
         }
 
 
@@ -128,10 +152,28 @@ namespace Assets.LogicModel.Enemy
         /// <returns></returns>
         private bool CheckBorderZ()
         {
-            return EnemyPosition.z <= EnemyHelper.EnemyBorderTop &&
-                EnemyPosition.z >= EnemyHelper.EnemyBorderBottom
-                ? true:false;
-           
+            var goodArea = EnemyPosition.z <= EnemyHelper.EnemyBorderTop &&
+                EnemyPosition.z >= EnemyHelper.EnemyBorderBottom;
+
+            if (goodArea)
+            {
+                Debug.Log("Dobre miejsce na planszy z");
+                return true;
+            }
+            else
+            {
+                Debug.Log("Nie Dobre miejsce na planszy z");
+                var shouldChageDirection = EnemyPosition.z > EnemyHelper.EnemyBorderTop &&
+                    DirectionZ == (int)EnumHelper.VerticalDirectionMovement.top;
+                if (shouldChageDirection) return false;
+                shouldChageDirection = EnemyPosition.z < EnemyHelper.EnemyBorderBottom &&
+                    DirectionZ == (int)EnumHelper.VerticalDirectionMovement.bottom;
+                if (shouldChageDirection) return false;
+
+                return true;
+            }
+
+
         }
 
 
