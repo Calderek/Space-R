@@ -23,6 +23,7 @@ public class EnemyMovement : MonoBehaviour
     {
         InitializeMovementControl();
         SetTargetPosition();
+        
     }
 
 
@@ -124,12 +125,29 @@ public class EnemyMovement : MonoBehaviour
         transform.Translate(vibration.DirectionX * Time.deltaTime * vibration.HorizontalVelocity, 0, vibration.DirectionZ * Time.deltaTime * vibration.VerticalVelocity);
     }
 
+    private Vector3 lastPosition ;
+    private Vector3 lastVelocity ;
+    private Vector3 lastAngularVelocity ;
+    
+    void OnCollisionEnter(Collision collision)
+    {
+            
+        if (collision.gameObject.tag == "enemy")
+        {
+            if (vibration.Enable)
+            {
+                vibration.ChnageDirectionByCullet();
+            }
+        }
+
+    }
+
 
 
     
-
-
+ 
    
+
 
 
 

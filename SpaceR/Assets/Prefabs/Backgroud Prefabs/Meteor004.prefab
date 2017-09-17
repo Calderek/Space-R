@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4930276824327462}
   - component: {fileID: 33067203276887044}
   - component: {fileID: 23804542712870220}
-  - component: {fileID: 114789752550843462}
   - component: {fileID: 114741268503137358}
+  - component: {fileID: 114920110769163596}
   m_Layer: 0
   m_Name: Meteor004
   m_TagString: Untagged
@@ -98,7 +98,7 @@ MonoBehaviour:
   objectRotationY: 0
   objectRotationZ: 0
   objectSize: 0
---- !u!114 &114789752550843462
+--- !u!114 &114920110769163596
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -106,6 +106,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1394160950820998}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 959b665a02c82a2488a50c4a5ff84572, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f7b3830286eae146bbeb1f40e1ef055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

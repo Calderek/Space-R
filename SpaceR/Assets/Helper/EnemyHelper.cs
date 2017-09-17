@@ -5,7 +5,7 @@ namespace Assets.Helper
     {
         public static int amount = 16;
         public static int defaultHealth = 5;
-        public static int defaultVelocity = 12;
+        public static int defaultVelocity = 120;
         public static bool vibrateEnable = true;
 
         public static int VibrationFrequencyX = 100;

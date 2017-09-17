@@ -94,6 +94,16 @@ namespace Assets.LogicModel.Enemy
             }
         }
 
+        private int SetReverseVibrateDirection(int direction)
+        {
+            return direction == 1 ? -1: 1;
+        }
+
+        //private EnumHelper.HorizontalDirectionMovement SetReverseVibrateDirection(EnumHelper.HorizontalDirectionMovement direction)
+        //{
+        //    return direction == EnumHelper.HorizontalDirectionMovement.left ? EnumHelper.HorizontalDirectionMovement.right : EnumHelper.HorizontalDirectionMovement.left;
+        //}
+
         /// <summary>
         /// Check that enemy ship exceeded the allowed border. When isn't in correctly place change direction flight.
         /// </summary>
@@ -157,12 +167,10 @@ namespace Assets.LogicModel.Enemy
 
             if (goodArea)
             {
-                Debug.Log("Dobre miejsce na planszy z");
                 return true;
             }
             else
             {
-                Debug.Log("Nie Dobre miejsce na planszy z");
                 var shouldChageDirection = EnemyPosition.z > EnemyHelper.EnemyBorderTop &&
                     DirectionZ == (int)EnumHelper.VerticalDirectionMovement.top;
                 if (shouldChageDirection) return false;
@@ -193,6 +201,14 @@ namespace Assets.LogicModel.Enemy
             OnChangeZ = true;
         }
 
+        public void ChnageDirectionByCullet()
+        {
+            //OnChangeX = true;
+            //OnChangeZ = true;
+            DirectionX=SetReverseVibrateDirection(DirectionX);
+            DirectionZ=SetReverseVibrateDirection(DirectionZ);
+
+        }
 
 
         /// <summary>

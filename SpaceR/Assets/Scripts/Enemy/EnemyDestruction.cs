@@ -23,7 +23,7 @@ public class EnemyDestruction : MonoBehaviour {
     {
         var hit = coll.collider.tag;
 
-        Debug.Log("Otrzymano trafienie.");
+        //Debug.Log("Otrzymano trafienie.");
         for(int i = 0; i < list.weaponList.Count; i++)
         {
             
